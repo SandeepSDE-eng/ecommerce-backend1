@@ -1,0 +1,155 @@
+/* custom.css */
+body {
+    background-color: #f8f9fa; /* Light background */
+    font-family: 'Nunito', sans-serif; /* Custom font */
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #343a40 !important; /* Dark navbar background */
+}
+
+.navbar-brand {
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.nav-link {
+    font-size: 1.1rem;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    background-color: #007bff;
+    border-radius: 5px;
+}
+
+/* Hover effect on navbar links */
+.navbar-nav .nav-item .nav-link {
+    transition: background-color 0.3s ease;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    background-color: #343a40;
+}
+
+.dropdown-item {
+    font-size: 1rem;
+    padding: 10px 20px;
+}
+
+.dropdown-item:hover {
+    background-color: #007bff;
+    border-radius: 5px;
+}
+
+/* Custom styling for the content section */
+main {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Additional button styling for form buttons */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+    }
+}
+/* custom.css */
+
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 250px;
+    background-color: #343a40;
+    padding-top: 20px;
+    border-right: 2px solid #6c757d;
+}
+
+.sidebar-header h4 {
+    color: #ffffff;
+}
+
+.sidebar .nav-item {
+    padding: 10px 20px;
+}
+
+.sidebar .nav-link {
+    color: #ffffff;
+    font-size: 1.1rem;
+    padding: 12px;
+    border-radius: 5px;
+}
+
+.sidebar .nav-link:hover {
+    background-color: #007bff;
+}
+
+/* Styling the content area */
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card .card-body {
+    padding: 25px;
+}
+
+.card-header {
+    font-weight: bold;
+    font-size: 1.25rem;
+    background-color: #343a40;
+}
+
+/* Card colors */
+.card.bg-info {
+    background-color: #17a2b8 !important;
+}
+
+.card.bg-success {
+    background-color: #28a745 !important;
+}
+
+.card.bg-warning {
+    background-color: #ffc107 !important;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 992px) {
+    .sidebar {
+        display: none; /* Hide sidebar on large mobile screens */
+    }
+
+    .col-md-9 {
+        width: 100%;
+    }
+
+    .navbar-toggler {
+        display: block;
+    }
+}
+

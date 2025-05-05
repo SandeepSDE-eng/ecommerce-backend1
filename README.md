@@ -117,6 +117,12 @@ Use provided SQL backup:
 php artisan serve
 ```
 
+
+Admin Credintial 
+
+Username-admin@example.com
+Passwrod-password123
+
 ---
 
 ## 📘 Postman Collection

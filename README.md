@@ -1,61 +1,154 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
+### ✅ **README.md**
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+```markdown
+# E-Commerce Backend API (Laravel)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+This is a Laravel-based backend system for a basic e-commerce platform that supports product management with multiple images, cart functionality, and basic CMS dashboard views.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## 📌 Features
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Phase 1:
+- ✅ Product CRUD (Create, Read, Update, Delete)
+- ✅ Upload and manage multiple images for each product
+- ✅ GET API to retrieve product listings with images
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### Phase 2:
+- ✅ Add product to cart (via POST API)
+- ✅ Cart item listing in both API and CMS
+- ✅ Backend CMS view to show products added to the cart
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## 📦 Tech Stack
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- **Backend Framework**: Laravel 10+
+- **Database**: MySQL 8+
+- **Language**: PHP 8+
+- **Admin Panel**: Integrated with clean UI (AdminLTE/Bootstrap-based)
+- **API Documentation**: Postman Collection Included
+- **Payment Gateway Integration**: (Optional placeholder for future integration)
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development/)**
-- **[Active Logic](https://activelogic.com)**
+## 📂 Project Structure
 
-## Contributing
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+ecommerce-backend1/
+├── app/
+│   ├── Http/
+│   └── Models/
+├── database/
+│   └── migrations/
+├── public/
+├── resources/
+│   └── views/
+├── routes/
+│   ├── api.php
+│   └── web.php
+├── .env.example
+├── composer.json
+└── README.md
 
-## Code of Conduct
+````
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+---
 
-## Security Vulnerabilities
+## 🚀 API Endpoints
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### 🔍 Product APIs
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET    | `/api/products` | Fetch all products with multiple images |
+| POST   | `/api/products` | Add a new product (with images) |
+| PUT    | `/api/products/{id}` | Update a product |
+| DELETE | `/api/products/{id}` | Delete a product |
 
-## License
+### 🛒 Cart APIs (User ID is hardcoded to `1`)
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST   | `/api/cart/add` | Add product to cart |
+| GET    | `/api/cart` | View cart items |
+| PUT    | `/api/cart/{id}` | Update quantity in cart |
+| DELETE | `/api/cart/{id}` | Remove item from cart |
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+---
+
+## 🛠️ Setup Instructions
+
+### 1. Clone the repository:
+```bash
+git clone https://github.com/SandeepSDE-eng/ecommerce-backend1.git
+cd ecommerce-backend1
+````
+
+### 2. Install dependencies:
+
+```bash
+composer install
+```
+
+### 3. Create `.env` file:
+
+```bash
+cp .env.example .env
+```
+
+Update DB credentials in `.env` file.
+
+### 4. Run database migrations:
+
+```bash
+php artisan migrate
+```
+
+### 5. Import sample DB (optional):
+
+Use provided SQL backup:
+[Google Drive SQL File](https://drive.google.com/file/d/1vJ97EhtZyavqAuUEiK9rD8HBb125Awup/view?usp=sharing)
+
+### 6. Start the server:
+
+```bash
+php artisan serve
+```
+
+---
+
+## 📘 Postman Collection
+
+You can find the full Postman API collection [here](https://drive.google.com/file/d/1vJ97EhtZyavqAuUEiK9rD8HBb125Awup/view?usp=sharing).
+
+---
+
+## 🔐 Admin CMS
+
+* Login page for admin
+* Manage Products (CRUD)
+* View all Cart Items (User ID = 1)
+
+---
+
+## ⚠️ Notes
+
+* Code follows Laravel best practices.
+* Exception handling and validation implemented in API.
+* File upload is handled securely and stored in public disk.
+* Neat UI for admin panel with clear navigation and intuitive UX.
+
+---
+
+
+## 👨‍💻 Developed by
+
+**Sandeep Yadav**
+Backend Developer | Laravel & API Specialist
+📧 [LinkedIn](https://linkedin.com) (Add yours)
+
+---
+
+
